@@ -2,7 +2,8 @@
  RMiller
  
  
- Computer Purchase
+Fraction Action
+ 
  
  Is Kill
  
@@ -15,6 +16,7 @@ import Darwin
 // Repeat Variables
 var repet0 = 0
 var repet1 = 0
+// Big number 4 mixed numbers
 var bigNum = 0
 
 
@@ -52,8 +54,28 @@ repeat {
                         
                         } else if (numer < denom) {
                             
-                                print(Int(numer!),"/",Int(denom!))
-                                repet1 = 1
+                            for i in 1...min(numer!, denom!) {
+                                
+                                if (numer! % i == 0 && denom! % i == 0) {
+                                
+                                numer = numer! / i
+                                denom = denom! / i
+                                    
+                                    if (i == denom!) {
+                                        
+                                    print(Int(numer!),"/",Int(denom!))
+                                    repet1 = 1
+                                    
+                                    }
+                                    
+                                }
+                                
+                                
+
+                            }
+                            
+                            
+                            
                             
                         } else {
                             
